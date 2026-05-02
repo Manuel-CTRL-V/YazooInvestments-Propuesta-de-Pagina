@@ -1,0 +1,140 @@
+/* ============================================
+   animations.css — Yazoo Premium Animations
+   ============================================ */
+
+/* ── Page Load Fade-In ── */
+@keyframes yazoo-page-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+body {
+  animation: yazoo-page-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Scroll Reveal Base ── */
+.y-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.y-reveal.y-from-left  { transform: translateX(-40px); }
+.y-reveal.y-from-right { transform: translateX(40px); }
+.y-reveal.y-scale      { transform: scale(0.92); }
+
+.y-reveal.y-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Staggered siblings */
+.y-reveal[data-delay="1"] { transition-delay: 0.10s; }
+.y-reveal[data-delay="2"] { transition-delay: 0.20s; }
+.y-reveal[data-delay="3"] { transition-delay: 0.30s; }
+.y-reveal[data-delay="4"] { transition-delay: 0.40s; }
+.y-reveal[data-delay="5"] { transition-delay: 0.50s; }
+.y-reveal[data-delay="6"] { transition-delay: 0.60s; }
+
+/* ── Navbar Scroll Shrink ── */
+header {
+  transition: padding 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease !important;
+}
+header.y-scrolled {
+  box-shadow: 0 4px 24px rgba(130, 85, 0, 0.10) !important;
+}
+header.y-scrolled > div {
+  height: 56px !important;
+}
+
+/* ── Card Hover Lift ── */
+.y-card-hover {
+  transition: transform 0.30s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.30s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.y-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(130, 85, 0, 0.14);
+}
+
+/* ── Image Zoom on Hover ── */
+.y-img-zoom {
+  overflow: hidden;
+}
+.y-img-zoom img {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.y-img-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* ── Button Pulse on Hover ── */
+button, a[class*="bg-primary"], a[class*="bg-amber"] {
+  transition: transform 0.20s ease, opacity 0.20s ease, box-shadow 0.20s ease !important;
+}
+button:hover, a[class*="bg-primary"]:hover, a[class*="bg-amber"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200, 134, 10, 0.30);
+}
+button:active, a[class*="bg-primary"]:active {
+  transform: translateY(0px);
+}
+
+/* ── Nav Link Underline Slide ── */
+header nav a {
+  position: relative;
+}
+header nav a:not([class*="border-b"])::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #c8860a;
+  transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+header nav a:not([class*="border-b"]):hover::after {
+  width: 100%;
+}
+
+/* ── Parallax Hero ── */
+.y-parallax {
+  will-change: transform;
+}
+
+/* ── Counter Number ── */
+.y-counter {
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+
+/* ── Shimmer on Stat Cards ── */
+@keyframes y-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.y-shimmer-once {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.25) 50%, transparent 100%);
+  background-size: 400px 100%;
+  animation: y-shimmer 1.2s ease-in-out;
+}
+
+/* ── Floating Logo Animation ── */
+@keyframes y-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-5px); }
+}
+header img {
+  animation: y-float 4s ease-in-out infinite;
+}
+
+/* ── Section Divider Pulse ── */
+@keyframes y-amber-pulse {
+  0%, 100% { opacity: 1; width: 40%; }
+  50%       { opacity: 0.6; width: 50%; }
+}
+.age-gate-divider {
+  animation: y-amber-pulse 3s ease-in-out infinite;
+}

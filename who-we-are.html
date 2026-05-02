@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html style="scroll-behavior: smooth;" class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700;800&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background-color: rgba(200, 134, 10, 0.2);
+            z-index: 0;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#cac6bf",
+                        "primary": "#825500",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-tertiary-container": "#2b2d2d",
+                        "outline": "#847563",
+                        "tertiary": "#5d5f5f",
+                        "primary-fixed-dim": "#ffb950",
+                        "surface-dim": "#e8d7c9",
+                        "inverse-primary": "#ffb950",
+                        "surface-container-highest": "#f1dfd1",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#fff1e7",
+                        "on-primary-container": "#3f2700",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#633f00",
+                        "inverse-on-surface": "#ffeee0",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e7e2da",
+                        "on-secondary-fixed": "#1d1c17",
+                        "background": "#fff8f4",
+                        "on-secondary-container": "#67645e",
+                        "surface-bright": "#fff8f4",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-primary-fixed": "#291800",
+                        "inverse-surface": "#392f25",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#d6c4af",
+                        "secondary": "#605e58",
+                        "on-secondary-fixed-variant": "#494741",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#f7e5d7",
+                        "on-background": "#231a11",
+                        "surface-container": "#fdebdc",
+                        "tertiary-container": "#939494",
+                        "primary-fixed": "#ffddb3",
+                        "secondary-container": "#e7e2da",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#231a11",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#825500",
+                        "primary-container": "#c8860a",
+                        "surface-variant": "#f1dfd1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#514535",
+                        "surface": "#fff8f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-page": "40px",
+                        "section-padding": "80px",
+                        "container-max": "1200px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "display-lg": ["Epilogue"],
+                        "body-md": ["Manrope"],
+                        "title-sm": ["Manrope"],
+                        "headline-md": ["Epilogue"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "title-sm": ["20px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+        <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/age-gate.css">
+    <script src="js/age-gate.js" defer></script>
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/animations.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopAppBar -->
+<header class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm border-b border-amber-100/30 dark:border-amber-900/30">
+<div class="flex justify-between items-center px-12 h-20 max-w-full">
+<a href="index.html">
+  <img src="img/Logos_Yazoo_LogoPrincipal_Color.png" alt="Yazoo Investment" style="height:48px; width:auto; display:block;">
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="index.html">Home</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-amber-700 dark:text-amber-400 border-b-2 border-amber-600 pb-1" href="who-we-are.html">Who We Are</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="services.html">Services</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="production.html">Production</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="social-impact.html">Social Impact</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="contact.html">Contact Us</a>
+</nav>
+<div class="flex items-center gap-4 text-amber-600 dark:text-amber-500 font-['Epilogue'] tracking-tight text-sm font-medium uppercase">
+<span>EN | ES</span>
+<span class="material-symbols-outlined hover:opacity-80 transition-all cursor-pointer" data-icon="call">call</span>
+<span class="material-symbols-outlined hover:opacity-80 transition-all cursor-pointer" data-icon="public">public</span>
+</div>
+</div>
+</header>
+
+
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[512px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A wide panoramic view of a premium rum aging facility in the Caribbean. Massive oak barrels are stacked in symmetric rows within a high-ceilinged warehouse. The atmosphere is warm and golden, with dusty beams of sunlight filtering through high windows. The style is sophisticated and architectural, emphasizing the grand scale of the rum production process with an amber color palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9ZiH2M9nAtT6oduJW6iFSgacW1oit74CT0trGqS1wpahAV05BhMVu87RNRIpxj0FWoOchJvgbocITGok3MceNB-sojmqO71SmQVhc-khPBPwHaM5t8q2nUeFysRMrJCoN1OLJ9gdPpJi1MLpFuObkljCTnG_pR6H5uhS5TS91rdVhYa_dtlcn4WV1UdWdaHGiXYwJytrLtP0I4apXBs7aGv5OXSMiMem_MGRpNxvr8xj_arGWx3aXZBVbRkXhApwv-4vG-Mnuqd8');"></div>
+<div class="absolute inset-0 bg-surface-container-low/60 backdrop-blur-[2px]"></div>
+<div class="relative z-10 text-center px-6">
+<p class="font-label-caps text-primary mb-4 text-[22px]">Rones y Bebidas del Caribe Yazoo</p>
+<h1 class="font-display-lg text-white font-extrabold text-[52px] leading-tight drop-shadow-lg">Who We Are</h1>
+</div>
+</section>
+<!-- Intro Block -->
+<section class="bg-white py-24 px-8">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+<!-- Mosaic Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-xl overflow-hidden shadow-xl aspect-square">
+<img class="w-full h-full object-cover" data-alt="Detailed close-up of heavy industrial distillation tanks inside a modern Caribbean rum facility. The stainless steel surfaces catch the warm overhead light, creating highlights in soft amber and cream. The scene is clean, professional, and reflects high-end industrial craftsmanship. Minimalist composition with a focus on geometric metal forms." src="img/img_f2fd659d.jpg"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="rounded-xl overflow-hidden shadow-xl flex-grow h-48">
+<img class="w-full h-full object-cover" data-alt="Atmospheric interior of a rum aging warehouse with hundreds of weathered oak barrels stacked to the ceiling. The lighting is low and dramatic, highlighting the natural textures of the wood and the dusty environment. Subtle hints of amber liquid reflect the heritage and time-intensive process of spirit aging." src="img/img_7ce62310.jpg"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-xl flex-grow h-48">
+<img class="w-full h-full object-cover" data-alt="A professional worker in a clean uniform carefully inspecting rum bottles on a modern production line. The setting is bright and orderly, with clear glass bottles catching the light. The focus is on quality control and human craftsmanship within a high-tech facility in the Dominican Republic." src="img/img_3f975db7.jpg"/>
+</div>
+</div>
+</div>
+<!-- Description -->
+<div class="space-y-8">
+<div class="inline-block border-l-4 border-primary pl-6">
+<h2 class="font-headline-md text-on-background mb-4">A Legacy of Excellence</h2>
+<p class="font-body-md text-on-surface-variant max-w-xl">
+                            Founded in 2006 in San Pedro de Macorís, Dominican Republic, Yazoo Investment has established itself as a guardian of Caribbean tradition. Operating from three state-of-the-art aging warehouses with over 90,000 barrels, we currently export our refined heritage to 33 countries across the globe.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<div class="bg-primary-container px-8 py-4 rounded-full shadow-md">
+<span class="font-label-caps text-on-primary text-xl">90K Barrels</span>
+</div>
+<div class="bg-primary-container px-8 py-4 rounded-full shadow-md">
+<span class="font-label-caps text-on-primary text-xl">375 Products</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-7xl mx-auto space-y-16">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-white p-12 rounded-2xl shadow-[0_20px_40px_rgba(200,134,10,0.08)] border-t-4 border-primary relative">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="font-title-sm text-primary mb-4">Mission</h3>
+<p class="font-body-md text-on-surface-variant">To offer innovative alternatives in rums that meet quality standards, ensuring every bottle carries the soul of the Caribbean and the excellence of our craft.</p>
+</div>
+<div class="bg-white p-12 rounded-2xl shadow-[0_20px_40px_rgba(200,134,10,0.08)] border-t-4 border-primary relative">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="visibility">visibility</span>
+<h3 class="font-title-sm text-primary mb-4">Vision</h3>
+<p class="font-body-md text-on-surface-variant">To consolidate as top-quality alcoholic beverage producer nationally and internationally, becoming the global benchmark for Dominican spirits.</p>
+</div>
+</div>
+<!-- 2nd Photo Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-64">
+<div class="rounded-xl overflow-hidden shadow-lg h-full">
+<img class="w-full h-full object-cover" data-alt="A beautiful hand-painted mural on the side of a historic rum distillery building. The art depicts Caribbean culture and the history of sugar cane. The sunlight is warm and bright, highlighting the vibrant colors and the textured wall of the facility under a clear blue sky." src="img/img_b59ded4b.jpg"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg h-full">
+<img class="w-full h-full object-cover" data-alt="Close-up of wooden barrels maturing in a cool, dark cellar. The texture of the aged oak is visible, with iron bands holding the wood together. The atmosphere is quiet and serene, suggesting the slow passage of time necessary for a perfect spirit to develop its character." src="img/img_b82a70b9.jpg"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg h-full">
+<img class="w-full h-full object-cover" data-alt="A refined rum sampling session. Crystal glasses with amber-colored liquid are arranged on a polished wood table. A professional taster's hand is visible swirled one glass. The setting is an elegant private tasting room with warm, low-key lighting and high-end aesthetic." src="img/img_d65f6a2e.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- History Timeline -->
+<section class="bg-white py-24 px-8 overflow-hidden">
+<div class="max-w-5xl mx-auto">
+<h2 class="font-display-lg text-center text-on-background mb-20">This story began in Venezuela…</h2>
+<div class="relative timeline-line space-y-16">
+<!-- 1993 -->
+<div class="relative z-10 flex flex-col md:flex-row items-center md:justify-start">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-amber-100">
+<h4 class="font-title-sm text-primary">1993: Origin</h4>
+<p class="text-sm text-on-surface-variant">The foundations of our distilling expertise are established with the first experimental blends.</p>
+</div>
+</div>
+<div class="w-8 h-8 bg-primary-container border-4 border-white rounded-full absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">1993</span>
+</div>
+<div class="md:w-1/2"></div>
+</div>
+<!-- 1997 -->
+<div class="relative z-10 flex flex-col md:flex-row items-center md:justify-end">
+<div class="md:w-1/2"></div>
+<div class="w-8 h-8 bg-primary-container border-4 border-white rounded-full absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">1997</span>
+</div>
+<div class="md:w-1/2 md:pl-12">
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-amber-100">
+<h4 class="font-title-sm text-primary">1997: Sales Growth</h4>
+<p class="text-sm text-on-surface-variant">Rapid expansion across regional markets leads to the brand's first major commercial success.</p>
+</div>
+</div>
+</div>
+<!-- 2001 -->
+<div class="relative z-10 flex flex-col md:flex-row items-center md:justify-start">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-amber-100">
+<h4 class="font-title-sm text-primary">2001: Acquisition</h4>
+<p class="text-sm text-on-surface-variant">Strategic acquisition of premium aging facilities to secure future inventory quality.</p>
+</div>
+</div>
+<div class="w-8 h-8 bg-primary-container border-4 border-white rounded-full absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">2001</span>
+</div>
+<div class="md:w-1/2"></div>
+</div>
+<!-- 2006 -->
+<div class="relative z-10 flex flex-col md:flex-row items-center md:justify-end">
+<div class="md:w-1/2"></div>
+<div class="w-8 h-8 bg-primary-container border-4 border-white rounded-full absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">2006</span>
+</div>
+<div class="md:w-1/2 md:pl-12">
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-amber-100">
+<h4 class="font-title-sm text-primary">2006: Constitution in DR</h4>
+<p class="text-sm text-on-surface-variant">Official founding of Yazoo Investment Srl in San Pedro de Macorís, Dominican Republic.</p>
+</div>
+</div>
+</div>
+<!-- 2008 -->
+<div class="relative z-10 flex flex-col md:flex-row items-center md:justify-start">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-amber-100">
+<h4 class="font-title-sm text-primary">2008: Expansion</h4>
+<p class="text-sm text-on-surface-variant">Inauguration of the second major aging warehouse to double production capacity.</p>
+</div>
+</div>
+<div class="w-8 h-8 bg-primary-container border-4 border-white rounded-full absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">2008</span>
+</div>
+<div class="md:w-1/2"></div>
+</div>
+<!-- 2018 -->
+<div class="relative z-10 flex flex-col md:flex-row items-center md:justify-end">
+<div class="md:w-1/2"></div>
+<div class="w-8 h-8 bg-primary-container border-4 border-white rounded-full absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">2018</span>
+</div>
+<div class="md:w-1/2 md:pl-12">
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-amber-100">
+<h4 class="font-title-sm text-primary">2018: Organic Growth</h4>
+<p class="text-sm text-on-surface-variant">Achieving a milestone of 375+ unique formulas and presence in over 30 countries.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center">
+<p class="font-label-caps text-primary tracking-widest">…continuing in the Dominican Republic</p>
+</div>
+</div>
+</section>
+<!-- Today Stats -->
+<section class="bg-primary-container py-24 px-8 text-white text-center">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-3 gap-12 mb-16">
+<div class="space-y-2">
+<h2 class="font-display-lg font-bold text-6xl">90K</h2>
+<p class="font-label-caps uppercase tracking-widest text-white/80">Barrels / 33 Countries</p>
+</div>
+<div class="space-y-2">
+<h2 class="font-display-lg font-bold text-6xl">375+</h2>
+<p class="font-label-caps uppercase tracking-widest text-white/80">Proprietary Formulas</p>
+</div>
+<div class="space-y-2">
+<h2 class="font-display-lg font-bold text-6xl">60+</h2>
+<p class="font-label-caps uppercase tracking-widest text-white/80">International Awards</p>
+</div>
+</div>
+<div class="max-w-2xl mx-auto space-y-8">
+<p class="font-body-md text-white/90 leading-relaxed">
+                        Beyond distilling, we are committed to our community through the AFD-Barceló Foundation, supporting education and local development in the region.
+                    </p>
+<button class="inline-flex items-center gap-2 border-2 border-white px-8 py-3 rounded-full font-label-caps hover:bg-white hover:text-primary transition-all duration-300">
+                        Social Impact <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Production CTA Strip -->
+<section class="bg-surface-container-low py-12 px-8 border-y border-amber-100/30">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-title-sm text-on-surface">Our production process guarantees the 100% Dominican origin of our rums.</p>
+<a class="text-primary font-bold font-label-caps inline-flex items-center gap-2 hover:opacity-80 transition-opacity" href="#">
+                    Discover Our Production <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-50 dark:bg-stone-950 w-full py-16 border-t border-amber-100 dark:border-amber-900/30">
+<div class="flex flex-col items-center gap-8 px-8 text-center">
+<div class="text-lg font-semibold text-amber-800 tracking-tighter uppercase">
+                Yazoo Investment
+            </div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Who We Are</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Services</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Production</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Social Impact</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Contact Us</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Terms of Service</a>
+</nav>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-amber-700/60 hover:text-amber-700 transition-colors cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-amber-700/60 hover:text-amber-700 transition-colors cursor-pointer" data-icon="language">language</span>
+<span class="material-symbols-outlined text-amber-700/60 hover:text-amber-700 transition-colors cursor-pointer" data-icon="info">info</span>
+</div>
+<p class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-400 max-w-lg">
+                © 2024 Yazoo Investment Srl. Distilling Excellence Since 1982. Enjoy Responsibly.
+            </p>
+</div>
+</footer>
+</body></html>

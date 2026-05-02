@@ -1,0 +1,312 @@
+<style>
+/* Navigation Scoped Styles */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-amber);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.nav-logo {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-brown-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo span {
+    color: var(--color-amber);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-6);
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-brown-dark);
+    font-weight: 500;
+    text-decoration: none;
+    padding: var(--spacing-2) 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-amber);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-amber);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Dropdowns */
+.nav-item-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-warm);
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-2) 0;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+    padding: var(--spacing-2) var(--spacing-4);
+    color: var(--color-gray-text);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-amber-bg);
+    color: var(--color-brown-dark);
+}
+
+/* Right Section */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.lang-switch {
+    font-weight: 600;
+    color: var(--color-brown-dark);
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    gap: var(--spacing-2);
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-amber-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-amber);
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--color-amber);
+    color: var(--color-white);
+}
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-brown-dark);
+    transition: all 0.3s ease;
+}
+
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-white);
+    z-index: 1000;
+    transition: right 0.4s ease;
+    padding: 100px var(--spacing-6) var(--spacing-6);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.mobile-sidebar.open {
+    right: 0;
+}
+
+.mobile-nav-link {
+    font-size: var(--font-size-xl);
+    color: var(--color-brown-dark);
+    text-decoration: none;
+    padding: var(--spacing-4) 0;
+    border-bottom: 1px solid var(--color-border);
+    font-weight: 600;
+}
+
+.mobile-nav-link.active {
+    color: var(--color-amber);
+}
+
+.mobile-dropdown-links {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--spacing-4);
+    display: none;
+}
+
+.mobile-dropdown-links.open {
+    display: flex;
+}
+
+.mobile-dropdown-item {
+    padding: var(--spacing-3) 0;
+    color: var(--color-gray-text);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--color-border);
+}
+
+/* Hamburger Active State */
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); background-color: var(--color-amber); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background-color: var(--color-amber); }
+
+@media (max-width: 992px) {
+    .nav-links, .nav-actions { display: none; }
+    .hamburger { display: flex; }
+}
+</style>
+
+<header class="site-header">
+<div class="container nav-container">
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo">
+    Yazoo<span>.</span>
+    </a>
+
+    <!-- Desktop Links -->
+    <nav class="nav-links">
+    <a href="index.html" class="nav-link" data-path="index.html">Home</a>
+    <a href="who-we-are.html" class="nav-link" data-path="who-we-are.html">Who We Are</a>
+    
+    <div class="nav-item-dropdown">
+        <a href="services.html" class="nav-link" data-path="services.html">Services ▾</a>
+        <div class="dropdown-menu">
+        <a href="services.html#rum-aging" class="dropdown-item">Rum Aging</a>
+        <a href="services.html#co-packing" class="dropdown-item">Co-Packing</a>
+        <a href="services.html#barrel-workshop" class="dropdown-item">Barrel Workshop</a>
+        <a href="services.html#bodega" class="dropdown-item">Bodega</a>
+        </div>
+    </div>
+
+    <div class="nav-item-dropdown">
+        <a href="production.html" class="nav-link" data-path="production.html">Production ▾</a>
+        <div class="dropdown-menu">
+        <a href="production.html#raw-material" class="dropdown-item">Raw Material</a>
+        <a href="production.html#facilities" class="dropdown-item">Facilities</a>
+        <a href="production.html#technical-department" class="dropdown-item">Technical Department</a>
+        <a href="production.html#certifications" class="dropdown-item">Certifications</a>
+        </div>
+    </div>
+
+    <a href="social-impact.html" class="nav-link" data-path="social-impact.html">Social Impact</a>
+    <a href="contact.html" class="nav-link" data-path="contact.html">Contact</a>
+    </nav>
+
+    <!-- Desktop Actions -->
+    <div class="nav-actions">
+    <div class="lang-switch">EN</div>
+    <div class="social-icons">
+        <a href="#" class="social-icon">FB</a>
+        <a href="#" class="social-icon">IN</a>
+        <a href="#" class="social-icon">Phone</a>
+        <a href="#" class="social-icon">Email</a>
+    </div>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+</div>
+</header>
+
+<!-- Mobile Sidebar -->
+<div class="mobile-sidebar" id="mobileSidebar">
+<a href="index.html" class="mobile-nav-link" data-path="index.html">Home</a>
+<a href="who-we-are.html" class="mobile-nav-link" data-path="who-we-are.html">Who We Are</a>
+
+<div class="mobile-nav-link" id="mobileServicesToggle" style="cursor:pointer; display:flex; justify-content:space-between;">
+    Services <span style="color:var(--color-amber);">▾</span>
+</div>
+<div class="mobile-dropdown-links" id="mobileServicesLinks">
+    <a href="services.html#rum-aging" class="mobile-dropdown-item">Rum Aging</a>
+    <a href="services.html#co-packing" class="mobile-dropdown-item">Co-Packing</a>
+    <a href="services.html#barrel-workshop" class="mobile-dropdown-item">Barrel Workshop</a>
+    <a href="services.html#bodega" class="mobile-dropdown-item">Bodega</a>
+</div>
+
+<div class="mobile-nav-link" id="mobileProductionToggle" style="cursor:pointer; display:flex; justify-content:space-between;">
+    Production <span style="color:var(--color-amber);">▾</span>
+</div>
+<div class="mobile-dropdown-links" id="mobileProductionLinks">
+    <a href="production.html#raw-material" class="mobile-dropdown-item">Raw Material</a>
+    <a href="production.html#facilities" class="mobile-dropdown-item">Facilities</a>
+    <a href="production.html#technical-department" class="mobile-dropdown-item">Technical Department</a>
+    <a href="production.html#certifications" class="mobile-dropdown-item">Certifications</a>
+</div>
+
+<a href="social-impact.html" class="mobile-nav-link" data-path="social-impact.html">Social Impact</a>
+<a href="contact.html" class="mobile-nav-link" data-path="contact.html">Contact</a>
+
+<div style="margin-top: auto; padding-top: var(--spacing-6); border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+    <span style="font-weight:bold; color:var(--color-amber);">EN / ES</span>
+    <div style="display:flex; gap:10px;">
+        <span style="font-weight:bold;">FB</span>
+        <span style="font-weight:bold;">IN</span>
+    </div>
+</div>
+</div>

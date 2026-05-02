@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Social Impact | Yazoo Investment Srl</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700;800&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#605e58",
+                        "surface-bright": "#fff8f4",
+                        "inverse-on-surface": "#ffeee0",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "tertiary-container": "#939494",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#e7e2da",
+                        "on-primary-fixed": "#291800",
+                        "primary-container": "#c8860a",
+                        "secondary-container": "#e7e2da",
+                        "primary-fixed-dim": "#ffb950",
+                        "surface-dim": "#e8d7c9",
+                        "tertiary-fixed": "#e2e2e2",
+                        "outline-variant": "#d6c4af",
+                        "surface-container-high": "#f7e5d7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#494741",
+                        "on-background": "#231a11",
+                        "on-tertiary-container": "#2b2d2d",
+                        "on-primary-container": "#3f2700",
+                        "surface-tint": "#825500",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#ffb950",
+                        "surface": "#fff8f4",
+                        "secondary-fixed-dim": "#cac6bf",
+                        "on-primary-fixed-variant": "#633f00",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#fdebdc",
+                        "on-secondary-container": "#67645e",
+                        "on-surface-variant": "#514535",
+                        "surface-variant": "#f1dfd1",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#5d5f5f",
+                        "surface-container-low": "#fff1e7",
+                        "surface-container-highest": "#f1dfd1",
+                        "background": "#fff8f4",
+                        "on-secondary-fixed": "#1d1c17",
+                        "outline": "#847563",
+                        "primary-fixed": "#ffddb3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#231a11",
+                        "error-container": "#ffdad6",
+                        "primary": "#825500",
+                        "inverse-surface": "#392f25"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-page": "40px",
+                        "gutter": "24px",
+                        "section-padding": "80px",
+                        "container-max": "1200px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "title-sm": ["Manrope"],
+                        "display-lg": ["Epilogue"],
+                        "headline-md": ["Epilogue"],
+                        "label-caps": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "title-sm": ["20px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(255, 248, 244, 0.4), rgba(255, 248, 244, 0.8));
+        }
+        .amber-shadow {
+            box-shadow: 0 10px 30px rgba(200, 134, 10, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-amber-100/50 shadow-[0_10px_30px_rgba(200,134,10,0.05)] duration-300 ease-in-out">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-amber-700 font-['Epilogue'] tracking-tight">Yazoo Investment</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 hover:text-amber-600 transition-colors font-['Epilogue'] tracking-tight" href="#">Home</a>
+<a class="text-slate-600 hover:text-amber-600 transition-colors font-['Epilogue'] tracking-tight" href="#">Who We Are</a>
+<a class="text-slate-600 hover:text-amber-600 transition-colors font-['Epilogue'] tracking-tight" href="#">Services</a>
+<a class="text-slate-600 hover:text-amber-600 transition-colors font-['Epilogue'] tracking-tight" href="#">Production</a>
+<a class="text-amber-700 font-semibold border-b-2 border-amber-600 pb-1 font-['Epilogue'] tracking-tight" href="#">Social Impact</a>
+<a class="text-slate-600 hover:text-amber-600 transition-colors font-['Epilogue'] tracking-tight" href="#">Contact Us</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps hover:opacity-80 transition-opacity">Shop Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[614px] flex items-center justify-center overflow-hidden mt-20">
+<div class="absolute inset-0 z-0">
+<img alt="Community and children" class="w-full h-full object-cover" data-alt="A bright and hopeful photograph of a Caribbean community center where local children are engaged in educational activities. The scene is bathed in golden, warm sunlight filtering through palm leaves, creating a soft luminance. The visual style is high-end and documentary-like, emphasizing human connection and optimism with a warm cream and amber color palette that feels welcoming and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmxaAc5b6EvRiPAchkIGlQAItELX3DPxlQSa_ZboA6FDeUf3386sZLpMbF4Otf2czox0eg-oyr9Rfjdr4nx0vpKzFPAlLmFkHHZJdcsvVUBlcMRs5dyAOAfbZYIQhDnY2daFsXrReDYZDBK2-fD1EPkVQvZ7juy8K-jG-9NojDX7rM1iLlYmENpqhpcSZrSj_WXyp16dO3kt6MQoEvzAyredJxlEy6pajrz9WyeItNfUqrTtWB-6Xt-qM4m23gjr_PUN0QQASZJWw"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 text-center px-6">
+<h1 class="font-display-lg text-[52px] text-inverse-surface leading-tight mb-4">Social Impact</h1>
+<p class="font-headline-md text-primary italic text-2xl">Rum helps others too!</p>
+</div>
+</header>
+<!-- Intro Section -->
+<section class="bg-white py-section-padding">
+<div class="max-w-[760px] mx-auto px-6 text-center">
+<p class="font-body-md text-on-surface-variant leading-relaxed text-lg mb-12">
+                At Yazoo Investment Srl, our heritage is deeply intertwined with the well-being of the Dominican people. Through our strategic partnership with the AFD-Barceló Foundation, we channel the success of our premium spirits into transformative community initiatives, ensuring that every drop of rum we produce contributes to a brighter future for the region.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20 amber-shadow">
+<div class="text-primary font-display-lg text-4xl mb-2">300+</div>
+<div class="font-label-caps text-secondary">families benefited</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20 amber-shadow">
+<div class="text-primary font-display-lg text-4xl mb-2">500+</div>
+<div class="font-label-caps text-secondary">students reached</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+<img class="h-64 w-full object-cover rounded-xl" data-alt="A horizontal strip image showing a group of smiling children in a modern, clean classroom setting in the Caribbean. They are holding books and looking forward with bright expressions. The lighting is soft and natural, emphasizing the warm cream tones of the architecture and the vibrant colors of their clothing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIrwFP3EoNOvoek2ehU__qUIdqcpNmBhiIOgUBA9DA4jvX14DYPZ-kO_MPHAx3BdWvaFho37TS3yD_Ez2WZvBl-eRbaBXL2P8MoRa4cCdxtomPxaj0SW3r7XoiKXlJi6xcQkcGA5VkPiHogi67tA5fFVI2j1CmgKqynkaoyJbuQBfk0U3fG5ASr5TLKHd_TkL5Nrne6_pi6YxMHzOSJ7FqoS5VOSYiLeYX2OV8ADx-uISizU9TtNYjEtJTxvHQf181PUBo1j56PQg"/>
+<img class="h-64 w-full object-cover rounded-xl" data-alt="A candid photograph of a community gathering where elderly residents and young volunteers are interacting during a health seminar. The atmosphere is warm and respectful, with golden hour lighting casting long, soft shadows across the terrace. The style is minimalist-tactile, focusing on the quality of human connection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlErh_VWGO02Xe82RuRs3K7l0U-dONuq84iOkB6OKVRs3KZrhZR_aA45D1dAIy35GQBQADC3ewxWIDBJeK5lRegHyvMBbDyq6v9gShKIPv5Y0veyqcyGVMF9jGiPswU461EtJsF0w__2EyCRaEUIwrrHl-Z06rck3lCP7o4qI_lbofwzrUvUxIQWx0c59KXJZZNNxSKg1f_FWPV8KLO3pjyL-VUGrk1NawtZCrcfAezvtNC-gvMN8UaqAe6J0byayYYsGFDRg-Fr4"/>
+<img class="h-64 w-full object-cover rounded-xl" data-alt="Close up image of hands planting a young tree in fertile Caribbean soil. The image represents environmental stewardship and growth. The focus is sharp on the dark earth and the green leaves, with a soft-focus background of a sun-drenched plantation. The color palette is rich in ambers and deep greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVPWhru35DlpytLaGJP34rL7yQpocX8QeIcQVdN-wplEX8GuDocbt1MKhASj8-dipZzKgSYBlDcnfMTHJuMj-6PdNZxQJXDHmnlXiD0s1iaVR7QX1y1nr9rJQAqPX-rEZsV8-2aACKww_5PwoeXeZkU-mlF-CGVSRGwaBtqPgYeKQQe9Y9NyQEevEX39Q--orLzvlnjWHYimJ2L7CRK4SJpz22wTZyiv_HPe02L1olS7tO8zVG111-QbeihUPndzsPliEH4-p_-Ig"/>
+</div>
+</section>
+<!-- Values & Mission -->
+<section class="bg-[#FDF8F0] py-section-padding">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="bg-white p-12 rounded-xl border-t-4 border-primary amber-shadow">
+<h3 class="font-headline-md text-primary mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">award_star</span>
+                    Values
+                </h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    Our foundation is built on integrity, transparency, and a profound respect for our origins. We believe that true luxury is not just in the craftsmanship of the spirit, but in the positive footprint we leave on the communities that nurture our production.
+                </p>
+<ul class="mt-6 space-y-4 font-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                        Empowering vulnerable families through sustainable support.
+                    </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                        Preserving cultural heritage through education.
+                    </li>
+</ul>
+</div>
+<div class="bg-white p-12 rounded-xl border-t-4 border-primary amber-shadow">
+<h3 class="font-headline-md text-primary mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">track_changes</span>
+                    Mission
+                </h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    Our mission is to provide the neediest communities with the tools required for self-sufficiency. We prioritize children's education as the primary catalyst for change, ensuring that every child has access to quality learning environments and resources.
+                </p>
+<ul class="mt-6 space-y-4 font-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                        Building educational infrastructure in rural regions.
+                    </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                        Facilitating yearly health and medical consultations.
+                    </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Programs List -->
+<section class="bg-white py-section-padding">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="font-headline-md text-center text-inverse-surface mb-16 underline decoration-amber-200 underline-offset-8">What we have accomplished so far</h2>
+<div class="space-y-unit">
+<div class="flex flex-col md:flex-row items-center gap-8 py-8 border-b border-surface-container-highest">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h4 class="font-title-sm text-inverse-surface mb-2">1. Education Programs</h4>
+<p class="text-on-surface-variant">Implementing curriculum-focused initiatives that teach values, environmental stewardship, and basic literacy to over 500 students annually.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8 py-8 border-b border-surface-container-highest">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-3xl">elderly</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h4 class="font-title-sm text-inverse-surface mb-2">2. Health Programs</h4>
+<p class="text-on-surface-variant">Providing direct assistance and community support systems for the elderly, ensuring dignity and care for the region's seniors.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8 py-8">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-3xl">medical_services</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h4 class="font-title-sm text-inverse-surface mb-2">3. Medical Programs</h4>
+<p class="text-on-surface-variant">Coordinating yearly mobile medical clinics that offer free consultations, vaccinations, and essential medicine to isolated communities.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+<img class="h-64 w-full object-cover rounded-xl" data-alt="A vibrant outdoor school courtyard in the Dominican Republic with children playing and learning under the shade of mature trees. The architecture is simple but elegant, painted in soft tones. The image captures the essence of childhood joy and the impact of educational investment in rural areas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQUFR-cJq_lfpvUacWeaNOwg-U0cTMgLc1TWta5guaYUJkrny_K06nAgFSOgmXbjjhc9vOeKTbjs6kfjtYI8FD5rqZlq4wL-bIc2swNEiQmco3VDxghlPWECBX9v6K8KBrO_JWcOy2bznUPfStoo7w0roPBiSOhDDjOXTZkfRpIfjo6BU4RTjpZNAFcFeb6puQ2KmkNk61Nz1mGP0_7z8aolBfCDwo0_ZfyOCY_LJbDEjOE43HkYDayHPOmDrUerNTglmYRCGFfw"/>
+<img class="h-64 w-full object-cover rounded-xl" data-alt="A professional medical practitioner smiling while consulting with a patient in a mobile clinic. The space is clean, bright, and organized. The lighting is crisp yet warm, showcasing a modern healthcare environment brought to a rural community. The aesthetic is clean, trustworthy, and high-quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiKgK520fXRrw7VNR2gVKCCARhRB0p_wjPJRLajJQz3MH5eAeJJGmYXKMTUILQRGQ1wa8mvV33DQuuGDjddr9-PCtRnqwASpdAKEODV6RaqQ9AXstArK0h1zHdXOP9gheNcQPc9W2od6ZCjKUautKk2qSjMk8elmuoO1PtfZAAMMUvPAOQ6XEhbdRYwP8pyZ1JNfVp1cWjgLLJj3rOwyXxvXMnIVLNX96DEV4UQHa7yTPpdudd020gnp9v3t78YTbNWPaXUIwsS0Q"/>
+<img class="h-64 w-full object-cover rounded-xl" data-alt="A group of diverse community leaders and foundation members shaking hands and smiling in front of a newly constructed community building. The scene is one of celebration and partnership. The color palette is dominated by sun-drenched ambers and warm whites, symbolizing a bright future." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYJ2msDJRadhlEJOsLm3Zf7MRKMtABSoe0sR1rYsrajdLUCGqTLVK-P7gyboq5_4ev9YUh6NKftDXQYU_HYlEBrGm_tR6239MLLR2Y-vgjpPMHs6NKNwqM52YKitdSZHCnmj67rn_ZI1B0H9y2faC3jGcQOOJ72Fi529_tmuy6BZxt7a9H0-IQCTUuJY0JQGE9aizA6hVwfxrGYyYFPO7zOKMP0-At_DpdoEsPiVoyN19mGJIrBfoiUe2fE9lFVzYWPNZ3FmSj92I"/>
+</div>
+</div>
+</section>
+<!-- Future Commitment -->
+<section class="bg-primary-container py-24">
+<div class="max-w-4xl mx-auto px-8 text-center text-white">
+<h2 class="font-display-lg italic mb-10 text-3xl md:text-4xl">Our commitment to the Dominican people is as deep as the aging process of our finest reserves. We will continue to grow, always ensuring our success is shared with those who make it possible.</h2>
+<a class="inline-block border-2 border-white text-white px-10 py-4 rounded-full font-label-caps hover:bg-white hover:text-primary transition-all" href="#">Visit the Foundation →</a>
+</div>
+</section>
+<!-- Production Bridge Strip -->
+<div class="bg-surface py-12 border-b border-outline-variant/20">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-on-surface text-lg">Our production process guarantees the 100% Dominican origin of our rums.</p>
+<a class="text-primary font-bold hover:underline underline-offset-4 flex items-center gap-2" href="#">
+                Discover Our Production 
+                <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-20 bg-[#FDF8F0] border-t border-amber-200/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+<div class="space-y-4">
+<div class="text-lg font-bold text-amber-800 font-['Epilogue']">Yazoo Investment</div>
+<p class="font-['Epilogue'] text-sm leading-relaxed text-slate-500">Distilling excellence and cultivating hope across the Dominican landscape since our inception.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-amber-700 mb-6 uppercase tracking-widest">Resources</h4>
+<ul class="space-y-3 font-['Epilogue'] text-sm">
+<li><a class="text-slate-500 hover:text-amber-700 hover:translate-y-[-2px] transition-all inline-block" href="#">Sustainability Report</a></li>
+<li><a class="text-slate-500 hover:text-amber-700 hover:translate-y-[-2px] transition-all inline-block" href="#">Press Kit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-amber-700 mb-6 uppercase tracking-widest">Legal</h4>
+<ul class="space-y-3 font-['Epilogue'] text-sm">
+<li><a class="text-slate-500 hover:text-amber-700 hover:translate-y-[-2px] transition-all inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-amber-700 hover:translate-y-[-2px] transition-all inline-block" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<div class="font-['Epilogue'] text-sm leading-relaxed text-slate-500">
+                    © 2024 Yazoo Investment Srl. Distilled Elegance.
+                </div>
+<div class="flex gap-4 text-amber-700">
+<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">mail</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

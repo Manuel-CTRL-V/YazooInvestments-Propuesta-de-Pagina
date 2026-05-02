@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Yazoo Investment Srl</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700;800;900&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#fff1e7",
+                        "on-primary-container": "#3f2700",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#e8d7c9",
+                        "inverse-primary": "#ffb950",
+                        "surface-container-highest": "#f1dfd1",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed-variant": "#633f00",
+                        "inverse-on-surface": "#ffeee0",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-tertiary-container": "#2b2d2d",
+                        "secondary-fixed-dim": "#cac6bf",
+                        "primary": "#825500",
+                        "outline": "#847563",
+                        "tertiary": "#5d5f5f",
+                        "primary-fixed-dim": "#ffb950",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-primary-fixed": "#291800",
+                        "inverse-surface": "#392f25",
+                        "on-secondary-container": "#67645e",
+                        "surface-bright": "#fff8f4",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-fixed": "#e7e2da",
+                        "on-secondary-fixed": "#1d1c17",
+                        "background": "#fff8f4",
+                        "tertiary-container": "#939494",
+                        "primary-fixed": "#ffddb3",
+                        "surface-container": "#fdebdc",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#231a11",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#e7e2da",
+                        "outline-variant": "#d6c4af",
+                        "secondary": "#605e58",
+                        "on-secondary-fixed-variant": "#494741",
+                        "on-background": "#231a11",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#f7e5d7",
+                        "on-surface-variant": "#514535",
+                        "surface": "#fff8f4",
+                        "surface-tint": "#825500",
+                        "primary-container": "#c8860a",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Epilogue"],
+                        "title-sm": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "display-lg": ["Epilogue"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "title-sm": ["20px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bottle-shadow {
+            box-shadow: 0 20px 40px rgba(200, 134, 10, 0.08);
+        }
+        .hero-overlay {
+            background-color: rgba(253, 248, 240, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-md border-b border-amber-100/20 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto font-['Epilogue'] tracking-tight">
+<div class="text-xl font-bold tracking-widest text-amber-700 uppercase">Yazoo Investment</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-gray-600 hover:text-amber-600 transition-colors" href="#">Heritage</a>
+<a class="text-amber-700 font-semibold border-b-2 border-amber-600 pb-1" href="#">Services</a>
+<a class="text-gray-600 hover:text-amber-600 transition-colors" href="#">Collections</a>
+<a class="text-gray-600 hover:text-amber-600 transition-colors" href="#">Inquiry</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-amber-600">shopping_bag</span>
+</button>
+<button class="hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-amber-600">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Page Hero -->
+<section class="relative w-full h-[512px] flex items-center justify-center overflow-hidden mt-20">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A highly detailed close-up of traditional oak aging barrels in a dim, atmospheric cellar. Golden light filters through the space, catching the textures of the wood grain and iron hoops. The scene evokes a sense of timeless heritage and premium quality, with warm amber tones and a soft, ethereal glow that reflects the distilled elegance of the brand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkab0B0JU8coPfYQYkFSs3F8lzsQGH6DsTfr5B2IcXQTuIjR2zjHLfuaEhIGaXjLVp43cDCwnwtQNO1BbZg8SgJiyQ7x-U0rBWreluDrrxH5MTxftsy2GBBmZi6R77hbfy03E0yEIeQW5Dq5vENHPsvQbf8aJJ_MBPeOv9hBehQOyGjNWkWdmG6V3nKcyMXV5XFFNneJiEF2x3s1Oo_vgKCBWzf6-hM-rRh85g8kbYg5fOlg11HYkMJ889Ev4aOhT7Kbalnrp65uQ');">
+</div>
+<div class="absolute inset-0 hero-overlay"></div>
+<div class="relative z-10 text-center px-4">
+<h1 class="font-headline-md text-[52px] text-white font-bold leading-tight drop-shadow-lg">Services</h1>
+<p class="font-display-lg text-[24px] text-primary-container italic mt-4 font-light">Quality, Maturity and Exclusivity</p>
+</div>
+</section>
+<!-- Intro + Mini Stats -->
+<section class="bg-surface-container-lowest py-20 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<h2 class="font-headline-md text-on-primary-container font-bold text-4xl">Excellence in Every Drop</h2>
+<p class="text-gray-500 font-body-md text-lg leading-relaxed">
+                    With over 90,000 barrels of American and French oak in our inventory, Yazoo Investment Srl sets the global gold standard for aging and distillation. Our commitment to high-quality standards ensures that every spirit resting in our cellars evolves with sophisticated complexity.
+                </p>
+<p class="text-gray-500 font-body-md text-lg leading-relaxed">
+                    We proudly serve over 50 exclusive customers across 33 countries, delivering bespoke aging solutions and premium spirits that define the Caribbean heritage.
+                </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="bg-primary-container p-8 rounded-xl text-center shadow-lg transform hover:-translate-y-1 transition-transform">
+<div class="font-headline-md text-white text-5xl font-extrabold">90</div>
+<div class="font-label-caps text-white mt-2 opacity-90">K Barrels</div>
+</div>
+<div class="bg-primary-container p-8 rounded-xl text-center shadow-lg transform hover:-translate-y-1 transition-transform">
+<div class="font-headline-md text-white text-5xl font-extrabold">50</div>
+<div class="font-label-caps text-white mt-2 opacity-90">Customers</div>
+</div>
+<div class="bg-primary-container p-8 rounded-xl text-center shadow-lg transform hover:-translate-y-1 transition-transform">
+<div class="font-headline-md text-white text-5xl font-extrabold">33</div>
+<div class="font-label-caps text-white mt-2 opacity-90">Countries</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Section 1: Rum Aging -->
+<section class="bg-surface-container-lowest py-24 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="rounded-2xl overflow-hidden bottle-shadow h-[500px]">
+<img class="w-full h-full object-cover" data-alt="An expansive interior shot of a rum aging warehouse with rows upon rows of dark oak barrels stretching into the distance. A warm, golden amber glow permeates the air, highlighting the dust particles and the aged texture of the wood. The atmosphere is quiet, serene, and heavy with the scent of maturing spirits. High-key lighting accents the physical quality of the storage facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7NxySUEyXNe2k8hCG3TQQNh5N7f3AH0izrrropf-sIOWhh6M-HJU7C33ys87k8c3Vd1VDFDLonPx1ZkfVXgiDWczFl7gl0cOg7vW81eNN_79CBbtVTgxmlVp3A7Y4owBNCO4sjnDa8bcIgEOfWALyvqwrTvUNzKaFAjSGrngTFYlJfFCR4356zHN9uzmyg8xQJkkJCcR0ASIZASndny_RpHmWeodamGGGulwSgllYRsarVj5s8e35aaLscdGM6iJEU255GoY_fUY"/>
+</div>
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container rounded-full opacity-40"></div>
+<span class="font-label-caps text-primary-container mb-4 block">01 / Rum Aging</span>
+<h2 class="font-headline-md text-on-primary-container text-4xl font-bold mb-6">Traditional Maturity</h2>
+<p class="text-gray-500 text-lg leading-relaxed mb-8">
+                    Across our six specialized cellars, we house 90,000 premium barrels. We utilize a diverse selection of American and French oak, allowing us to curate specific aroma profiles and toasts. Each barrel is a vessel for history, where the Dominican climate works in harmony with the wood to create unparalleled liquid gold.
+                </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center space-x-2 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-title-sm text-base">Oak Selection</span>
+</div>
+<div class="flex items-center space-x-2 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-title-sm text-base">Climate Control</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Section 2: Co-Packing -->
+<section class="bg-surface-container py-24 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<span class="font-label-caps text-primary-container mb-4 block text-right md:text-left">02 / Co-Packing</span>
+<h2 class="font-headline-md text-on-primary-container text-4xl font-bold mb-6 text-right md:text-left">Versatile Bottling Solutions</h2>
+<p class="text-gray-500 text-lg leading-relaxed mb-8 text-right md:text-left">
+                    Our co-packing facility is staffed by versatile professionals dedicated to precision and quality. From initial product development to final bottling, we offer comprehensive services that bring your vision to life. Our modern industrial lines handle various bottle shapes and label applications with artisanal care.
+                </p>
+<div class="flex justify-end md:justify-start space-x-4">
+<div class="bg-surface-container-highest px-6 py-3 rounded-full font-label-caps text-primary">Precision Lines</div>
+<div class="bg-surface-container-highest px-6 py-3 rounded-full font-label-caps text-primary">Product Dev</div>
+</div>
+</div>
+<div class="order-1 md:order-2 rounded-2xl overflow-hidden bottle-shadow h-[500px]">
+<img class="w-full h-full object-cover" data-alt="A sophisticated industrial bottling line in a warm, clean setting. Skilled workers in professional attire carefully monitor clear glass bottles moving through a modern assembly. The lighting is soft and flattering, highlighting the crystalline clarity of the bottles and the warm amber liquid. The scene conveys reliability, high-tech manufacturing, and luxury craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAmjAw98UbBoPRmHXMufzBzG3BEVzVs0WdAMAFGbbCVspWTTmlbEHXKu1MGSTtOOEKwJBqiy5L9K5-9aqrCDynRsZeLHGR2ddyxvZF_up2uO76z_njtkMj7DPTTqn19xQV3RTChTmeLWba_coZsL_W06dFMpM1MkWwmLdym6jcfoufpoHHyqs24Axdbtas51afmlPA_QajyRGsQ43bcp_Aw7ob34GzHdE55Cp2G5JwjErfrbW2adsGeqTvKrGBY5b5E_YqWFa3Ll4"/>
+</div>
+</div>
+</section>
+<!-- Service Section 3: Barrel Workshop -->
+<section class="bg-surface-container-lowest py-24 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="rounded-2xl overflow-hidden bottle-shadow h-[500px]">
+<img class="w-full h-full object-cover" data-alt="A modern workshop showcasing advanced barrel repair and restoration machinery. The environment is clean and well-organized, with sunlight glinting off stainless steel components and fresh oak wood. A craftsman is seen in the background working on a barrel hoop. The aesthetic is a blend of traditional coopering and modern engineering, focused on extending the life of premium aging vessels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaCwrEyyzPKSFC2eBZYWwz2Do1FSFg023AspiJrCcet6MuDIyH3TW1tIpZVN50bk3s4kRBTPs048Pvk98od6N7urwkLURs7EDgO1rSNQHNtFdgOtbaAMpaD2I-OJKBBPNJ8q_7J5CVLommr-NUR-l3pRoIApsdPt-82htzAICnNg6zXlfgJYD8t0WlICJBn4wkPYoAKofDCPeMn6aR8QrHGSduzBdi55NXzk3xu7ybhoVYvL-OZsccBs6WZ4BCXgA5Ryg-Raw9rD8"/>
+</div>
+<div>
+<span class="font-label-caps text-primary-container mb-4 block">03 / Barrel Workshop</span>
+<h2 class="font-headline-md text-on-primary-container text-4xl font-bold mb-6">Artisanal Restoration</h2>
+<p class="text-gray-500 text-lg leading-relaxed mb-8">
+                    Our in-house workshop is equipped with state-of-the-art restoration machinery. We extend the life of each barrel while preserving the unique flavors locked within its staves. This sustainable approach not only ensures longevity but also allows for experimental finishing and charring techniques that define our unique flavor profiles.
+                </p>
+<button class="flex items-center space-x-2 text-primary font-title-sm hover:underline">
+<span>Learn about our restoration process</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Service Section 4: Bodega Ron del Caribe -->
+<section class="bg-surface-container py-24 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<span class="font-label-caps text-primary-container mb-4 block">04 / Bodega Ron del Caribe</span>
+<h2 class="font-headline-md text-on-primary-container text-4xl font-bold mb-6">The Spirit Sanctuary</h2>
+<p class="text-gray-500 text-lg leading-relaxed mb-8">
+                    Located in San Pedro de Macorís, our Bodega is more than just a storage facility; it is a cultural landmark. Hosting a collection of over 530 unique bottle varieties, it serves as a premier event space and sensory archive. Experience the history of Caribbean spirits in a setting designed for the most discerning connoisseurs.
+                </p>
+<a class="inline-flex items-center px-8 py-4 bg-primary-container text-white rounded-full font-label-caps hover:bg-primary transition-colors space-x-3 shadow-md" href="#">
+<span>Visit The Bodega</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+<div class="order-1 md:order-2 rounded-2xl overflow-hidden bottle-shadow h-[500px]">
+<img class="w-full h-full object-cover" data-alt="The interior of a prestigious spirit bodega in San Pedro de Macorís. Large glass display cases show hundreds of unique rum bottles, illuminated by soft, focused museum-quality lighting. The floor is polished dark wood, and the walls are a creamy neutral tone. The atmosphere is one of a high-end gallery or library, dedicated to the rich history and variety of Caribbean spirits." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWkqSAiQlY6qrcIrvZv9Jg3XdDW08GFQ3hOWptudXIyA5gbH5eTz69q4ZTjE9fev4bLnzRwb_WsOX1Luft57u2JLlVbxCyoD0VK15-2M0pUq3A1ng0KV5wWGzZKofTRUY6DNuhSYxhLUvweXM46im6guw2tvCWkWCXFBhGnifySN9BwUzFGjkiNAecn3HNN8ubIBEz1CMzmMIkreSwHQKsweu8iYiE-XF3a5os8Lj881FR02WDez9ajdFVUgp3_xXSeSq3qwtZtAc"/>
+</div>
+</div>
+</section>
+<!-- Production Bridge Strip -->
+<section class="bg-primary-container py-16 px-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+<h3 class="font-headline-md text-white text-3xl font-light">
+                Our production process guarantees the <span class="font-bold">100% Dominican origin</span> of our rums.
+            </h3>
+<button class="px-10 py-4 border-2 border-white text-white rounded-full font-label-caps hover:bg-white hover:text-primary-container transition-all flex items-center space-x-3 group">
+<span>Discover Our Production</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-50 border-t border-amber-100/30 w-full py-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8 font-['Epilogue'] text-sm uppercase tracking-widest">
+<div class="text-lg font-black text-amber-800">Yazoo Investment</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-gray-500 hover:text-amber-600 transition-colors hover:translate-y-[-2px]" href="#">Privacy Policy</a>
+<a class="text-gray-500 hover:text-amber-600 transition-colors hover:translate-y-[-2px]" href="#">Terms of Service</a>
+<a class="text-gray-500 hover:text-amber-600 transition-colors hover:translate-y-[-2px]" href="#">Sustainability Report</a>
+<a class="text-gray-500 hover:text-amber-600 transition-colors hover:translate-y-[-2px]" href="#">Contact</a>
+</div>
+<div class="text-gray-500">© 2024 Yazoo Investment Srl. Distilled Elegance.</div>
+</div>
+</footer>
+</body></html>

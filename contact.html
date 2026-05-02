@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html style="scroll-behavior: smooth;" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700;800;900&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#f1dfd1",
+                    "inverse-primary": "#ffb950",
+                    "surface-bright": "#fff8f4",
+                    "on-secondary-fixed-variant": "#494741",
+                    "on-surface-variant": "#514535",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#392f25",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "primary-fixed": "#ffddb3",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary": "#5d5f5f",
+                    "surface-tint": "#825500",
+                    "primary": "#825500",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#d6c4af",
+                    "on-surface": "#231a11",
+                    "on-secondary-fixed": "#1d1c17",
+                    "secondary-container": "#e7e2da",
+                    "surface-container-high": "#f7e5d7",
+                    "secondary": "#605e58",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-container": "#67645e",
+                    "on-primary-container": "#3f2700",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#e8d7c9",
+                    "outline": "#847563",
+                    "secondary-fixed-dim": "#cac6bf",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#ffeee0",
+                    "on-primary-fixed": "#291800",
+                    "background": "#fff8f4",
+                    "secondary-fixed": "#e7e2da",
+                    "primary-fixed-dim": "#ffb950",
+                    "on-background": "#231a11",
+                    "tertiary-container": "#939494",
+                    "surface-container": "#fdebdc",
+                    "surface": "#fff8f4",
+                    "on-tertiary-container": "#2b2d2d",
+                    "surface-variant": "#f1dfd1",
+                    "primary-container": "#c8860a",
+                    "surface-container-low": "#fff1e7",
+                    "on-primary-fixed-variant": "#633f00",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "unit": "8px",
+                    "section-padding": "80px",
+                    "gutter": "24px",
+                    "margin-page": "40px"
+            },
+            "fontFamily": {
+                    "title-sm": ["Manrope"],
+                    "display-lg": ["Epilogue"],
+                    "body-md": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-md": ["Epilogue"]
+            },
+            "fontSize": {
+                    "title-sm": ["20px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .amber-shadow { box-shadow: 0 20px 40px rgba(200, 134, 10, 0.08); }
+        .cream-texture { background-image: radial-gradient(circle at 2px 2px, rgba(200, 134, 10, 0.05) 1px, transparent 0); background-size: 24px 24px; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+        <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/age-gate.css">
+    <script src="js/age-gate.js" defer></script>
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/animations.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm border-b border-amber-100/30 dark:border-amber-900/30">
+<div class="flex justify-between items-center px-12 h-20 max-w-full">
+<a href="index.html">
+  <img src="img/Logos_Yazoo_LogoPrincipal_Color.png" alt="Yazoo Investment" style="height:48px; width:auto; display:block;">
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="index.html">Home</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="who-we-are.html">Who We Are</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="services.html">Services</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="production.html">Production</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors" href="social-impact.html">Social Impact</a>
+<a class="font-['Epilogue'] tracking-tight text-sm font-medium uppercase text-amber-700 dark:text-amber-400 border-b-2 border-amber-600 pb-1" href="contact.html">Contact Us</a>
+</nav>
+<div class="flex items-center gap-4 text-amber-600 dark:text-amber-500 font-['Epilogue'] tracking-tight text-sm font-medium uppercase">
+<span>EN | ES</span>
+<span class="material-symbols-outlined hover:opacity-80 transition-all cursor-pointer" data-icon="call">call</span>
+<span class="material-symbols-outlined hover:opacity-80 transition-all cursor-pointer" data-icon="public">public</span>
+</div>
+</div>
+</header>
+
+
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="h-[307px] bg-surface-container-lowest cream-texture flex items-center px-8">
+<div class="max-w-7xl mx-auto w-full">
+<div class="relative inline-block">
+<h1 class="font-display-lg text-[52px] text-on-background leading-none">Contact Us</h1>
+<div class="h-1 w-24 bg-primary-container mt-4"></div>
+</div>
+</div>
+</section>
+<!-- Content Section -->
+<section class="bg-white py-section-padding px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-gutter">
+<!-- Left Column: Form -->
+<div class="space-y-12">
+<h2 class="font-headline-md text-on-surface max-w-2xl">We work with some of the biggest rum brands. Let's start your project.</h2>
+<div class="bg-surface-container-lowest border border-outline-variant p-10 rounded-xl amber-shadow">
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">NAME</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all" placeholder="Full name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">E-MAIL</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all" placeholder="email@address.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">SUBJECT / OBJECT</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all" placeholder="How can we help?" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">DESCRIPTION</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all resize-none" placeholder="Tell us about your project or inquiry..." rows="6"></textarea>
+</div>
+<button class="bg-primary-container text-on-primary font-label-caps py-4 px-12 rounded-full hover:bg-primary transition-all active:scale-95 shadow-lg shadow-primary-container/20" type="submit">
+                                SEND MESSAGE
+                            </button>
+</form>
+</div>
+</div>
+<!-- Right Column: Info -->
+<div class="space-y-8">
+<!-- Quick Links -->
+<div class="bg-white p-8 rounded-xl border border-stone-100 amber-shadow">
+<h4 class="font-label-caps text-primary mb-6">LINKS</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary flex justify-between items-center group" href="#">Services <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span></a></li>
+<li><a class="text-on-surface-variant hover:text-primary flex justify-between items-center group" href="#">Production <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span></a></li>
+<li><a class="text-on-surface-variant hover:text-primary flex justify-between items-center group" href="#">Bodega <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span></a></li>
+<li><a class="text-on-surface-variant hover:text-primary flex justify-between items-center group" href="#">Foundation <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span></a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant">
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<div>
+<p class="font-label-caps text-on-surface-variant mb-1">PHONE</p>
+<p class="font-title-sm text-on-surface">+1 809 526 6746</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<div>
+<p class="font-label-caps text-on-surface-variant mb-1">EMAIL</p>
+<p class="font-title-sm text-on-surface">comercial@robecayazoo.com</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Address & Map -->
+<div class="bg-white p-8 rounded-xl border border-stone-100 amber-shadow space-y-6">
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<p class="font-label-caps text-on-surface-variant mb-1">ADDRESS</p>
+<p class="text-on-surface leading-relaxed">Zona Franca Proindustria – Manzana 2 B<br/>San Pedro de Macoris, República Dominicana</p>
+</div>
+</div>
+<div class="aspect-video w-full rounded-xl border border-outline-variant overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="A sophisticated minimalist map visualization of a coastal region in the Dominican Republic. The map features elegant, thin line work in warm amber and soft brown tones against a creamy white background. Subtle markers indicate the industrial zone location, reflecting a premium, corporate aesthetic. The overall mood is precise, professional, and consistent with the luxury spirits industry branding." data-location="San Pedro de Macoris" src="img/img_314d833f.jpg"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary-container text-on-primary p-3 rounded-full shadow-xl">
+<span class="material-symbols-outlined" data-icon="near_me">near_me</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-50 dark:bg-stone-950 w-full py-16 border-t border-amber-100 dark:border-amber-900/30">
+<div class="flex flex-col items-center gap-8 px-8 text-center">
+<div class="text-lg font-semibold text-amber-800 tracking-tighter uppercase">
+                Yazoo Investment
+            </div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Who We Are</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Services</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Production</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Social Impact</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Contact Us</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-500 hover:text-amber-600 transition-colors" href="#">Terms of Service</a>
+</nav>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-amber-700/60 hover:text-amber-700 transition-colors cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-amber-700/60 hover:text-amber-700 transition-colors cursor-pointer" data-icon="language">language</span>
+<span class="material-symbols-outlined text-amber-700/60 hover:text-amber-700 transition-colors cursor-pointer" data-icon="info">info</span>
+</div>
+<p class="font-['Epilogue'] text-[10px] uppercase tracking-[0.2em] text-stone-400 max-w-lg">
+                © 2024 Yazoo Investment Srl. Distilling Excellence Since 1982. Enjoy Responsibly.
+            </p>
+</div>
+</footer>
+</body></html>
